@@ -1,4 +1,4 @@
-package Arrays;
+package arrays;
 
 public class BestTimeToBuySell {
 
@@ -6,8 +6,6 @@ public class BestTimeToBuySell {
 
         int[] prices = {7,1,5,3,6,4};
         int n = prices.length;
-        int max = 0;
-        int min = 0;
 
         int left = 0;
         int maxProfit = 0;
