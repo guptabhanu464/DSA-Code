@@ -8,9 +8,6 @@ public class LongestCommonPrefix {
         String result = arr[0];
 
         for(int i = 1 ; i < arr.length ; i++) {
-            while(arr[i].indexOf(result) != 0) {
-
-            }
             result = common(result ,arr[i]);
         }
 
