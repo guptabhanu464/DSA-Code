@@ -15,8 +15,5 @@ public class ReverseAnArray {
         int temp = 0;
         temp = a;
         a = b;
-
-
-
     }
 }
