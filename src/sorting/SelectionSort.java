@@ -4,6 +4,9 @@ public class SelectionSort {
 
     public static void main(String[] args) {
 
+        int[] arr = {14,16,29,30,21};
+        selectionSort(arr);
+
     }
     // In selection sort we generally divide our array into 2 parts
     // Sorted part and unsorted part
@@ -26,6 +29,7 @@ public class SelectionSort {
             arr[minIndex] = arr[i];
             arr[i] = temp;
         }
+        printArray(arr);
     }
 
     // Function to print the array

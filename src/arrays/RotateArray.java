@@ -1,7 +1,5 @@
 package arrays;
 
-import java.util.Arrays;
-
 public class RotateArray {
 
     public static void main(String[] args) {
@@ -10,13 +8,17 @@ public class RotateArray {
         // OUTPUT - 3 , 4 ,5 , 1, 2
         // Rotated By 2 elements
         int k = 2;
-        int[] r1 = reverseArray(arr , 0 , arr.length-1);
-        int[] r2 = reverseArray(r1 , 0 , k);
-        int[] r3 = reverseArray(r2 , k+1 , arr.length-1);
-
-        System.out.println(Arrays.toString(r1));
-        System.out.println(Arrays.toString(r2));
-        System.out.println(Arrays.toString(r3));
+        //int[] r1 = reverseArray(arr , 0 , arr.length-1);
+        //int[] r2 = reverseArray(r1 , 0 , k);
+        //int[] r3 = reverseArray(r2 , k+1 , arr.length-1);
+        rotate(arr,k);
+        for(int i : arr) {
+            System.out.print(i + " ");
+        }
+        System.out.println();
+        //System.out.println(Arrays.toString(r1));
+       // System.out.println(Arrays.toString(r2));
+       // System.out.println(Arrays.toString(r3));
 
     }
 
@@ -35,27 +37,20 @@ public class RotateArray {
         return arr;
     }
 
-    static void rotateArr(int arr[], int k) {
-
-        int n = arr.length;
-        k = k % n;
-
-        reverseArray1(arr, 0, k - 1);
-        reverseArray1(arr, k, n-1);
-        reverseArray1(arr, 0, n - 1);
-
+    public static void rotate(int[] nums, int k) {
+        k = k % nums.length;
+        reverse(nums , 0 , nums.length -1);
+        reverse(nums , 0 , k-1);
+        reverse(nums , k , nums.length -1);
     }
 
-
-    public static void reverseArray1(int[] arr, int left, int right) {
-        while (left < right) {
-            // Swap elements
-            int temp = arr[left];
-            arr[left] = arr[right];
-            arr[right] = temp;
-
-            left++;
-            right--;
+    public static void reverse(int[] arr , int start, int end) {
+        while(start < end) {
+            int temp = arr[start];
+            arr[start] = arr[end];
+            arr[end] = temp;
+            start++;
+            end--;
         }
     }
 

@@ -19,7 +19,8 @@ public class ReverseArray {
     }
 
     public static int[] reverseArray(int[] arr) {
-        int left = 0, right = arr.length - 1;
+        int left = 0;
+        int right = arr.length - 1;
 
         while (left < right) {
             // Swap elements

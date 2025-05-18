@@ -15,6 +15,8 @@ public class MergeSort {
         System.out.println();
     }
 
+    // Time Complexity - O(nlogn)
+
     public static void divide(int[] arr, int si, int ei) {
 
         if (si >= ei) {

@@ -16,7 +16,7 @@ public class TwoSum {
 
     }
 
-    // Brute Force - Time Taken o(n2)
+    // Brute Force - Time Taken o(n^2)
     // Two Inner Loops which will go till n
     // Space Complexity - o(1)
     public static int[] twoSum(int[] nums , int target) {
